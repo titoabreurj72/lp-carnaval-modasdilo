@@ -416,32 +416,59 @@
     </footer>
 
     <script>
-        // Countdown
-        function updateCountdown() {
-            const end = new Date('2026-02-18T23:59:59').getTime();
-            const now = new Date().getTime();
-            const dist = end - now;
-            const d = Math.floor(dist / (1000 * 60 * 60 * 24));
-            const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((dist % (1000 * 60)) / 1000);
-            document.getElementById('days').textContent = String(d).padStart(2, '0');
-            document.getElementById('hours').textContent = String(h).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(m).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(s).padStart(2, '0');
-            if (dist < 0) {
-                document.getElementById('countdown').innerHTML = '<p class="text-2xl font-bold">Promoção Encerrada</p>';
-            }
-        }
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+    // Countdown Timer
+    function updateCountdown() {
+        const endDate = new Date('2026-02-18T23:59:59').getTime();
+        const now = new Date().getTime();
+        const distance = endDate - now;
 
-        // Form
-        document.getElementById('leadForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const
+        // Cálculos
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Atualiza o HTML
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+        // Se a promoção acabou
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('countdown').innerHTML = '<p class="text-2xl font-bold text-brand-blue">Promoção Encerrada</p>';
+        }
+    }
+
+    // Inicia o countdown
+    updateCountdown();
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // Formulário de Leads
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const whatsapp = document.getElementById('whatsapp').value;
+        const cidade = document.getElementById('cidade').value;
+        
+        // Aqui você pode integrar com sua ferramenta de email marketing
+        console.log('Lead capturado:', {nome, email, whatsapp, cidade});
+        
+        // Mostra mensagem de sucesso
+        document.getElementById('leadForm').classList.add('hidden');
+        document.getElementById('successMessage').classList.remove('hidden');
+        
+        // Opcional: enviar para Google Sheets, Mailchimp, etc
+        // fetch('SUA_URL_DE_WEBHOOK', {
+        //     method: 'POST',
+        //     body: JSON.stringify({nome, email, whatsapp, cidade})
+        // });
+    });
+</script>
+
 
 
 
