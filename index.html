@@ -327,81 +327,42 @@
         </div>
     </section>
 
-    <!-- FORMULÁRIO -->
-    <!-- FORMULÁRIO -->
+<!-- FORMULÁRIO -->
 <section class="py-20 gradient-bg-hero">
     <div class="container mx-auto px-4">
         <div class="max-w-5xl mx-auto">
             <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <div class="grid md:grid-cols-5">
+                <div class="grid md:grid-cols-5 gap-0">
                     <!-- COLUNA 1 - TEXTO (2 colunas de largura) -->
-                    <div class="md:col-span-2 bg-gradient-to-br from-brand-peach to-brand-peacher p-8 md:p-12 text-white flex flex-col justify-top">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6"><span style="color:#000">Ganhe 10% OFF na Próxima Compra!</span> 🎁</h2>
-                        <p class="text-lg mb-6"><span style="color:#000">Cadastre-se e receba um cupom exclusivo de</span> <strong class="text-brand-yellow">10% de desconto</strong> <span style="color:#000">para usar em qualquer compra futura!</span></p>
+                    <div class="md:col-span-2 bg-gradient-to-br from-brand-peach to-brand-peacher p-8 md:p-12 flex flex-col justify-start">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Ganhe 10% OFF na Próxima Compra! 🎁</h2>
+                        <p class="text-lg mb-6 text-gray-900">Cadastre-se e receba um cupom exclusivo de <strong class="text-brand-blue">10% de desconto</strong> para usar em qualquer compra futura!</p>
                         <ul class="space-y-3">
-                            <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span style="color:#000">Cupom enviado por e-mail na hora</span></li>
-                            <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span style="color:#000">Sem valor mínimo de compra</span></li>
-                            <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span style="color:#000">Promoções exclusivas em primeira mão</span></li>
+                            <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span class="text-gray-900">Cupom enviado por e-mail na hora</span></li>
+                            <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span class="text-gray-900">Sem valor mínimo de compra</span></li>
+                            <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span class="text-gray-900">Promoções exclusivas em primeira mão</span></li>
                         </ul>
                     </div>
                     
                     <!-- COLUNA 2 - FORMULÁRIO (3 colunas de largura) -->
-                    <div class="md:col-span-3 p-0 bg-white">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6ULwN5W9puwWJXabji7I4nLRIUCPRXqxD7gIxOJD2MeqcAw/viewform?embedded=true" width="640" height="1120" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe><br>
+                    <div class="md:col-span-3 bg-white">
+                        <div class="w-full h-full">
+                            <iframe 
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSe6ULwN5W9puwWJXabji7I4nLRIUCPRXqxD7gIxOJD2MeqcAw/viewform?embedded=true" 
+                                class="w-full h-full min-h-[1120px]" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0">
+                                Carregando…
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!---    <section class="py-20 gradient-bg-hero">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
-                    <div class="grid md:grid-cols-2">
-                        <div class="bg-gradient-to-br from-brand-peach to-brand-peacher p-8 md:p-12 text-white flex flex-col justify-center">
-                            <h2 class="text-3xl md:text-4xl font-bold mb-6"><span style="color:#000">Ganhe 10% OFF na Próxima Compra! 🎁</span></h2>
-                            <p class="text-lg mb-6"><span style="color:#000">Cadastre-se e receba um cupom exclusivo de</span> <strong class="text-brand-yellow">10% de desconto</strong> <span style="color:#000">para usar em qualquer compra futura!</span></p>
-                            <ul class="space-y-3">
-                                <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span style="color:#000">Cupom enviado por e-mail</span></li>
-                                <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span style="color:#000">Sem valor mínimo de compra</span></li>
-                                <li class="flex items-center gap-3"><span class="text-2xl">✅</span><span style="color:#000">Promoções exclusivas em primeira mão</span></li>
-                            </ul>
-                        </div>
-                        <div class="p-8 md:p-12 bg-white">
-                            <form id="leadForm" class="space-y-5">
-                                <div>
-                                    <label class="block text-brand-blue font-semibold mb-2">Nome Completo *</label>
-                                    <input type="text" id="nome" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-green focus:outline-none" placeholder="Seu nome">
-                                </div>
-                                <div>
-                                    <label class="block text-brand-blue font-semibold mb-2">E-mail *</label>
-                                    <input type="email" id="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-green focus:outline-none" placeholder="seu@email.com">
-                                </div>
-                                <div>
-                                    <label class="block text-brand-blue font-semibold mb-2">WhatsApp *</label>
-                                    <input type="tel" id="whatsapp" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-green focus:outline-none" placeholder="(21) 99999-9999">
-                                </div>
-                                <div>
-                                    <label class="block text-brand-blue font-semibold mb-2">Cidade *</label>
-                                    <input type="text" id="cidade" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-green focus:outline-none" placeholder="Rio de Janeiro">
-                                </div>
-                                <button type="submit" class="w-full gradient-btn-green text-white font-bold text-lg py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg">Quero Meu Cupom de 10% OFF! 🎉</button>
-                                <p class="text-sm text-gray-500 text-center">Seus dados estão seguros conosco. Sem spam!</p>
-                            </form>
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6ULwN5W9puwWJXabji7I4nLRIUCPRXqxD7gIxOJD2MeqcAw/viewform?embedded=true" width="640" height="1011" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-                            <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 border-2 border-green-500 rounded-lg text-center">
-                                <p class="text-green-700 font-bold text-lg">✅ Cadastro realizado com sucesso!</p>
-                                <p class="text-green-600 mt-2">Seu cupom será enviado para o e-mail cadastrado em instantes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>--->
-
-    <!-- CTA FINAL -->
+<!-- CTA FINAL -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
@@ -495,6 +456,7 @@
         // });
     });
 </script>
+
 
 
 
